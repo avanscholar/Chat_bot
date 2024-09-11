@@ -3,3 +3,4 @@ openai
 llama-index
 nltk
 llama-index-llms-huggingface
+sentencepiece
