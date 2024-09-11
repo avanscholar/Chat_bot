@@ -7,3 +7,4 @@ sentencepiece
 llama-index-embeddings-langchain
 langchain-community
 langchain
+sentence-transformers
