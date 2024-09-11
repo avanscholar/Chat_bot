@@ -1,7 +1,7 @@
 import streamlit as st
-from llama_index import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
-from llama_index.llms import OpenAI
-import openai
+from llama_index.core import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
+# from llama_index.llms.open import OpenAI
+# import openai
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core.prompts.prompts import SimpleInputPrompt
 from llama_index.core import Settings
