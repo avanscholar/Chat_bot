@@ -6,5 +6,8 @@ llama-index-llms-huggingface
 sentencepiece
 llama-index-embeddings-langchain
 langchain-community
-langchain
 sentence-transformers
+langchain>=0.0.200
+llama-index
+streamlit
+
