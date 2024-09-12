@@ -8,6 +8,4 @@ llama-index-embeddings-langchain
 langchain-community
 sentence-transformers
 langchain>=0.0.200
-llama-index
-streamlit
 
