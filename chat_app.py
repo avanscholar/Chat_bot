@@ -7,11 +7,11 @@ from llama_index.core.prompts.prompts import SimpleInputPrompt
 from llama_index.core import Settings
 
 # openai.api_key = st.secrets.openai_key
-st.header("Chat with the Streamlit docs 💬 📚")
+st.header("Chatbot for Plastic+LCA Knowledge Retrieval System 💬 📚")
 
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
     st.session_state.messages = [
-        {"role": "assistant", "content": "Ask me a question about Streamlit's open-source Python library!"}
+        {"role": "assistant", "content": "Ask me a question about Plastic+LCA Via. Fine-tuned LlaMA's open-source platform!"}
     ]
 
 import torch
