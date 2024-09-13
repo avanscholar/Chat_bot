@@ -22,11 +22,11 @@ query_wrapper_prompt=SimpleInputPrompt("<|USER|>{query_str}<|ASSISTANT|>")
 llm = HuggingFaceLLM(
     context_window=4096,
     max_new_tokens=512,
-    generate_kwargs={"temperature": 0.1, "do_sample": False},
+    generate_kwargs={"temperature": 0.2, "do_sample": False},
     system_prompt=system_prompt,
     query_wrapper_prompt=query_wrapper_prompt,
-    tokenizer_name="avankumar/Chatbot_plastic_LLM",
-    model_name="avankumar/Chatbot_plastic_LLM",
+    tokenizer_name="avankumar/Plastic_LLM_QandA",
+    model_name="avankumar/Plastic_LLM_QandA",
     device_map="auto",
     # uncomment this if using CUDA to reduce memory usage
     model_kwargs={"torch_dtype": torch.float16 , "load_in_8bit":False}  #Keep True if we want to store the model in 8bit
@@ -66,7 +66,7 @@ for message in st.session_state.messages: # Display the prior chat messages
 # If last message is not from assistant, generate a new response
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
+        with st.spinner("Retrieving..."):
             response = chat_engine.chat(prompt)
             st.write(response.response)
             message = {"role": "assistant", "content": response.response}
